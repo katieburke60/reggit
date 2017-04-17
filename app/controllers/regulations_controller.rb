@@ -7,7 +7,7 @@ class RegulationsController < ApplicationController
   end
 
   def show
-    regulation = Ragulation.find(params[:id])
+    regulation = Regulation.find(params[:id])
     #API call for specific regulation (by certain ID)
     render json: regulation, serializer: RegulationShowSerializer
   end
