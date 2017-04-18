@@ -5,6 +5,7 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
+gem 'rest-client'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.2'
@@ -25,7 +26,8 @@ gem 'bcrypt', '~> 3.1.7'
 # gem 'rack-cors'
 #
 # gem 'rails-api', '~> 0.4.0'
-
+gem 'jbuilder', '~> 2.5'
+gem 'rack-cors', :require => 'rack/cors'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri

@@ -1,10 +1,12 @@
 Rails.application.routes.draw do
-  resources :followers
-  resources :accounts
-  resources :categories
-  resources :citizens
-  resources :votes
-  resources :comments
-  resources :regulations
+  # root to: 'regulations#index'
+  resources :followers, only: [:index]
+  resources :accounts, only: [:index]
+  resources :categories, only: [:index]
+  resources :citizens, only: [:index, :show]
+  resources :votes, only: [:index]
+  resources :comments, only: [:index]
+  resources :regulations, only: [:index, :show]
+  resources :apicall, only: [:index]
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
